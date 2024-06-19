@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Popup with Image, Text, and Audio Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+
+
+    <style>
+      
+
+        
+    </style>
+</head>
+<body>
+
+
+    <div id="container">
+        <div id="navBar">
+            <div class="logo">INTEL classes</div>
+            <nav class="menu">
+                <a href="tel:+917012935811">Contact</a>
+                <a href="#location" onclick="locationAlert(this)">Location</a>
+            </nav>
+    
+        </div>
+      </div>
+    
+        <div id="header_div">
+        </div>
+
+       
+
+        
+    
+    <div class="popup minimized" id="popup">
+
+
+        <div class="flex-container">
+            <button class="minimize-button" id="minimize-button"><a class="w3-left w3-btn" >❮ </a></button>
+            <p id="popup-question" ></p>
+        </div>
+        
+       
+        <div class="popup-content-wrapper">
+            <div class="popup-image" id="popup-image">
+                <img id="popup-img" src="" alt="" style="width: 100%; display: none;">
+            </div>
+            <div class="popup-content" id="description_div">
+                <h4 id="description" style="font-family:noto-sans,sans-serif; font-weight: 400;">
+                    
+                </h4>
+            </div>
+            
+            <div class="content active" id="straight-content">
+                <!-- Content for Straight tab goes here -->
+            </div>
+            <div class="content" id="easy-content">
+                <!-- Content for Easy tab goes here -->
+            </div>
+         
+        </div>
+       
+        <div class="audio-player">
+            <div class="tabs" id="tabs-container">
+                <button class="tab active" id="straight-tab">Short note</button>
+                <button class="tab" id="easy-tab" style="display: none;">Simplified note</button>
+            </div>
+            <div id="player_controls">
+                <button id="play-pause"><img id="play_pause_img" src="pause1.png"></button>
+                <input type="range" id="seek" value="0">
+             </div>
+        </div>
+    </div>
+    
+    <audio id="audio"></audio>
+
+    <div id="spinner_div" style="display: flex; justify-content: center; margin: 20px;">
+       
+        <div class="spinner" id="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            </div>
+            </div>
+
+<div id="toast" class="toast"><p>Data not found</p></div>
+    
+    
+    <!-- Firebase SDKs -->
+  <script type="module" src="script.js"></script>
+  <script>
+    function locationAlert() {
+  alert("opposite St.Ignatius school , Kanjiramattom , 7012935811");
+}
+  </script>
+</body>
+</html>
